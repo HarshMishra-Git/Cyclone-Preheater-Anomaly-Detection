@@ -22,15 +22,15 @@ flowchart TD
     B --> C{Data Loading & Preprocessing}
     C -->|DataProcessor| D[Data Cleaning & Quality Report]
     C -->|DataProcessor| E[Feature Engineering]
-    B -->|Sidebar & Main Pages| F[Page Modules<br/>(Overview, Anomaly Detection, Statistical Analysis)]
+    B --> F[Page Modules: Overview, Anomaly Detection, Statistical Analysis]
     F -->|Visualization Requests| G[Visualizer Module]
     G -->|Plotly Charts| B
     F -->|Anomaly Detection Request| H[AnomalyDetector Module]
-    H -->|Algorithms:<br/>Z-Score, IQR, Isolation Forest, Rolling Stats| I[Anomaly Results]
+    H -->|Algorithms: Z-Score, IQR, Isolation Forest, Rolling Stats| I[Anomaly Results]
     I -->|Summary, Periods, Scores| G
     F -->|Export/Download| J[Export Module]
     B -->|Report Generation| K[PowerPoint/CSV/JSON Export]
-    subgraph Backend Utilities
+    subgraph Backend_Utilities
         D
         E
         G
@@ -38,10 +38,8 @@ flowchart TD
         J
     end
     style B fill:#f5f5f5,stroke:#333,stroke-width:1px
-    style Backend Utilities fill:#e0eaff,stroke:#1a237e
+    style Backend_Utilities fill:#e0eaff,stroke:#1a237e
 ```
-
----
 
 ## 📝 Features
 
